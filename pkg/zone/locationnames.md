@@ -649,9 +649,9 @@ The tree below show you all the location names which could be recognized by gola
 If you want to get Location China, you could use 
 
 ```go
-location, _ := time.LoadLocation("Asia/Shanghai")
-value := "2019-08-12 19:57:23"
-pattern := "2006-01-02 15:04:05"
-result, _ := ParseTimeInLocation(pattern, value, location)
+    location, _ := time.LoadLocation("Asia/Shanghai")
+    value := "2019-08-12 19:57:23"
+    pattern := "2006-01-02 15:04:05"
+    result, _ := ParseTimeInLocation(pattern, value, location)
 
 ```

@@ -1,6 +1,28 @@
 
 # 1 introduction
 
+golang use UTC(Universal Time Coordinated, 世界协调时间) default. But we usually use CST(China Standard Time, 中国标准时间)。CST is UTC +8:00 in general。
+
+## 1.1 golang use UTC default
+
+```go
+    time := time.Now()
+    // 默认UTC    
+    loc, err := time.LoadLocation("") 
+```
+
+## 1.2 golang load location by specified name
+
+```go
+    // CST when in China
+    loc, err := time.LoadLocation("Local")
+    // PDT America Los Angeles
+    loc, err := time.LoadLocation("America/Los_Angeles")
+    // CST China Chongqing
+    loc, _:= time.LoadLocation("Asia/Chongqing")
+```
+
+you can find all timezone names in `$GOROOT/lib/time/zoneinfo.zip` showed below.
 The tree below show you all the location names which could be recognized by golang `time.LoadLocation` to convert location name to `time.Location`. 
 
 - **location names tree**

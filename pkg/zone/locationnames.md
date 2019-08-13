@@ -653,4 +653,5 @@ location, _ := time.LoadLocation("Asia/Shanghai")
 value := "2019-08-12 19:57:23"
 pattern := "2006-01-02 15:04:05"
 result, _ := ParseTimeInLocation(pattern, value, location)
+
 ```

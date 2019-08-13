@@ -210,6 +210,8 @@ First, in the absence of time zone information, Parse interprets a time as UTC;
 ParseInLocation interprets the time as in the given location.
 Second, when given a zone offset or abbreviation, Parse tries to match it
 against the Local location; ParseInLocation uses the given location.
+Yo find the time.Location, you can use `time.LoadLocation(name)`. the name you can find from pkg/zone/zoneinfo.
+If you want to know the details, you can read from  https://github.com/eiDear/gotools/blob/master/pkg/zone/locationnames.md
 */
 func ParseTimeInLocation(pattern, value string, loc *time.Location) (time.Time, error) {
 	return time.ParseInLocation(pattern, value, loc)

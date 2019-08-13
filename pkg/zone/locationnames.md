@@ -7,7 +7,7 @@ golang use UTC(Universal Time Coordinated, 世界协调时间) default. But we u
 
 ```go
     time := time.Now()
-    // 默认UTC    
+    // default UTC
     loc, err := time.LoadLocation("") 
 ```
 
